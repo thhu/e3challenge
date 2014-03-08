@@ -25,12 +25,12 @@
 
         <script type="text/javascript">
 		$(document).ready( function() {
-		    $('.subMenu').smint({
+		    $('#subMenu').smint({
 		    	'scrollSpeed' : 1000
 		    });
 		});
 		</script>
-		
+
 		<style type="text/css">
 			.carousel-inner > .item > img { margin: 0 auto; }
 		</style>
@@ -43,26 +43,83 @@
 
         <!-- Add your site or application content here -->
        <div class="wrap">
+       	
+       	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">E3 Challenge</a>
+    </div>
 
-	  <div class="subMenu navbar navbar-default" role="navigation" style="position: fixed; top:0px;">
-	 	<div class="inner container-fluid">
-	 		<div class="navbar-header">E3 Challenge</div>
-	 		<a href="#" id="s1" class="subNavBtn">HOME</a> 
-			<a href="#" id="s2" class="subNavBtn">CHALLENGE</a>
-			<a href="#" id="s3" class="subNavBtn">PARTNERS</a>
-			<a href="#" id="s4" class="subNavBtn">JOIN</a>
-			<a href="#" id="s5" class="subNavBtn end">CONTACT</a>
-		</div>	
-	  </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav" id="subMenu">
+        <li><a href="#" id="s1" class="subNavBtn">HOME</a></li>
+		<li><a href="#" id="s2" class="subNavBtn">CHALLENGE</a></li>
+		<li><a href="#" id="s3" class="subNavBtn">PARTNERS</a></li>
+		<li><a href="#" id="s4" class="subNavBtn">JOIN</a></li>
+		<li><a href="#" id="s5" class="subNavBtn end">CONTACT</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
 
 	<div class="section s1 container">
-		
+	
+
 
 
 		<div class="inner">
-			
-			<!-- where the slider is suppose to go --> 
+
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    			    <!-- Indicators -->
+  			      <ol class="carousel-indicators">
+    			      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      			    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+     			     <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+     			   </ol>
+
+    			    <!-- Wrapper for slides -->
+    			    <div class="carousel-inner">
+   			       <div class="item active">
+   			         <img src="img/img_1.jpg">
+    			        <div class="carousel-caption">
+    			          <h3>Header</h3>
+    			          <center><p>WordsWords WordsWords WordsWords WordsWords WordsWords WordsWords WordsWords WordsWords Words</p></center>
+    			        </div>
+    			      </div>
+    			      <div class="item">
+    			        <img src="img/img_2.jpg">
+    			        <div class="carousel-caption">
+    			          <h3>Header</h3>
+     			         <center><p>WordsWords WordsWords WordsWords WordsWords WordsWords WordsWords WordsWords WordsWords Words</p></center>
+       			     </div>
+      			    </div>
+       			   <div class="item">
+        			    <img src="img/img_3.jpg">
+        			    <div class="carousel-caption">
+        			      <h3>Header</h3>
+         			     <center><p>WordsWords WordsWords WordsWords WordsWords WordsWords WordsWords WordsWords WordsWords Words</p></center>
+         			   </div>
+       			   </div>
+     			   </div>
+
+      			  <!-- Controls -->
+        			<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+      			    <span class="glyphicon glyphicon-chevron-left"></span>
+      			  </a>
+      			  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+       			   <span class="glyphicon glyphicon-chevron-right"></span>
+     			   </a>
+     			 </div>
+   			 </div>
 
 		</div> <!-- close inner --> 
 	</div>
@@ -72,11 +129,33 @@
 
 
 	<div class="section s2">
-		
-		<div class="inner">
 
-			<h1>The Challenge</h1>
-			3 2 1 
+		<div class="inner">
+			<div class="container-fluid">
+			  <div class="row">
+			  	<div class="col-md-12">
+			  		<h1>The Challenge</h1>
+			  	</div>
+			  </div>
+			  <div class="row">
+			  	<div class="col-md-1">&nbsp;</div>
+			  	<div class="col-md-11">3 Business Challenges</div>
+			  </div>
+			  <div class="row">
+			  	<div class="col-md-3">&nbsp;</div>
+			  	<div class="col-md-9">2 Summer Months</div>
+			  </div>
+			  <div class="row">
+			  	<div class="col-md-5">&nbsp;</div>
+			  	<div class="col-md-7">1 Winning Team</div>
+			  </div>
+			  <div class="row">
+			  	<div class="col-md-12">
+			  		<p>description</p>
+			  	</div>
+			  </div>
+			</div>
+
 		</div>
 
 	</div>
