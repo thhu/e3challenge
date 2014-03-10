@@ -33,6 +33,84 @@
 
 		<style type="text/css">
 			.carousel-inner > .item > img { margin: 0 auto; }
+			div.section.s2 {
+				background-color: black;
+				color: white;
+			}
+			#mentors{
+				background-color: #999999;
+				color: white;
+			}
+			div.background-black {
+				background-color: black;
+				color: white; 
+			}
+			div.background-blue {
+				background-color: #3399cc;
+				color: white; 
+			}
+			div.trapez{
+			     width:100px; 
+			     height:0; 
+			     border-bottom:100px solid blue;
+			     border-left:60px solid transparent;
+			     border-right:60px solid transparent; 
+			}
+			div.trapez2{
+			     width:200px; 
+			     height:0; 
+			     border-top:30px solid blue;
+			     border-left:20px solid transparent;
+			     border-right:20px solid transparent; 
+			}
+			div.text-align-center{
+				text-align:center;
+			}
+			#triangle-topleft {
+				width: 0;
+				height: 0;
+				border-top: 100px solid red;
+				border-right: 100px solid transparent;
+			}
+			#triangle-topright {
+				width: 0;
+				height: 0;
+				border-top: 100px solid red;
+				border-left: 100px solid transparent;
+			
+			}
+			
+			#triangle-bottomleft {
+				width: 0;
+				height: 0;
+				border-bottom: 100px solid red;
+				border-right: 100px solid transparent;
+			}	
+			
+			#triangle-bottomright {
+				width: 0;
+				height: 0;
+				border-bottom: 100px solid red;
+				border-left: 100px solid transparent;
+			}
+			#mentors h2:before{
+				position:relative;
+				top:40px;
+				content:"";
+				width: 0;
+				height: 0;
+				border-top: 30px solid red;
+				border-left: 30px solid transparent;
+			}
+			#mentors h2:after{
+				content:"";
+				position:relative;
+				top:40px;
+				width: 0;
+				height: 0;
+				border-top: 30px solid red;
+				border-right: 30px solid transparent;
+			}
 		</style>
 
     </head>
@@ -54,7 +132,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">E3 Challenge</a>
+      <a class="navbar-brand" href="#"><img src="img/E3-Icon.png" />Challenge</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -72,10 +150,6 @@
 
 
 	<div class="section s1 container">
-	
-
-
-
 		<div class="inner">
 
 			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -124,35 +198,45 @@
 		</div> <!-- close inner --> 
 	</div>
 
-
-
-
-
 	<div class="section s2">
 
 		<div class="inner">
 			<div class="container-fluid">
 			  <div class="row">
-			  	<div class="col-md-12">
+		 	 	<div class="col-md-1">&nbsp;</div>
+			  	<div class="col-md-10">
 			  		<h1>The Challenge</h1>
 			  	</div>
-			  </div>
-			  <div class="row">
 			  	<div class="col-md-1">&nbsp;</div>
-			  	<div class="col-md-11">3 Business Challenges</div>
 			  </div>
 			  <div class="row">
-			  	<div class="col-md-3">&nbsp;</div>
-			  	<div class="col-md-9">2 Summer Months</div>
+		 	 	<div class="col-md-1">&nbsp;</div>
+			  	<div class="col-md-1">&nbsp;</div>
+			  	<div class="col-md-10"><img src="img/e3-3.JPG"/>&nbsp;Business Challenges</div>
+		 	 	<div class="col-md-1">&nbsp;</div>
 			  </div>
 			  <div class="row">
-			  	<div class="col-md-5">&nbsp;</div>
-			  	<div class="col-md-7">1 Winning Team</div>
+		 	 	<div class="col-md-4">&nbsp;</div>
+			  	<div class="col-md-7"><img src="img/e3-2.JPG"/>&nbsp;Summer Months</div>
+		 	 	<div class="col-md-1">&nbsp;</div>
 			  </div>
 			  <div class="row">
-			  	<div class="col-md-12">
-			  		<p>description</p>
+			  	<div class="col-md-6">&nbsp;</div>
+			  	<div class="col-md-4"><img src="img/e3-1.JPG"/>&nbsp;Winning Team</div>
+			  	<div class="col-md-1">&nbsp;</div>
+			  </div>
+			  <div class="row">&nbsp;</div>
+			  <div class="row">
+		 	 	<div class="col-md-1">&nbsp;</div>
+			  	<div class="col-md-10">
+			  		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta aliquet nisl, nec placerat nisi viverra eget. 
+			  		                     Curabitur sed hendrerit ligula. Duis vulputate, justo eget condimentum elementum, urna massa pharetra sapien, eu volutpat felis leo eu est. 
+                                         lass aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque tempus, felis a aliquet porttitor, metus massa sodales nisi, suscipit venenatis 
+                                         ipsum arcu et eros. Suspendisse pulvinar nulla tristique nibh hendrerit fermentum. Quisque eget tortor venenatis, tempus velit at, lacinia urna. Cras egestas vehicula leo a ultricies.
+                                          Quisque nec iaculis sem. Integer scelerisque elementum nisl id hendrerit. Sed tincidunt nisl sed commodo vehicula. Nulla non ultricies urna. 
+                                         Ut mollis lacinia sem ac fermentum. Maecenas fermentum nisi eget consectetur facilisis.</p>
 			  	</div>
+		 	 	<div class="col-md-1">&nbsp;</div>
 			  </div>
 			</div>
 
@@ -162,75 +246,211 @@
 
 	<div class="section s3">
 		<div class="inner">
-
-			<h1>Mentors</h1>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<h1>Gallery</h1>
-			<br/>
-			<br/>
-			<br/><br/><br /><br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/><br/><br /><br/>
+			<div class="container-fluid">
+			  <div class="row" id="mentors">
+		 	 	<div class="col-md-1">&nbsp;</div>
+			  	<div class="col-md-1">
+			  		<h1>Mentors</h1>
+			  	</div>
+			  	<div class="col-md-10">&nbsp;</div>
+		 	 	<div class="col-md-1">&nbsp;</div>
+			  </div>
+			  <div class="row">&nbsp;</div>
+			  <div class="row">
+		 	 	<div class="col-md-1">&nbsp;</div>
+			  	<div class="col-md-2"><img src="img/face-edited.jpg" /></div>
+			  	<div class="col-md-6"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta aliquet nisl, nec placerat nisi viverra eget. 
+			  		                     Curabitur sed hendrerit ligula. Duis vulputate, justo eget condimentum elementum, urna massa pharetra sapien, eu volutpat felis leo eu est. 
+                                         lass aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque tempus, felis a aliquet porttitor, metus massa sodales nisi, suscipit venenatis 
+                                         ipsum arcu et eros. Suspendisse pulvinar nulla tristique nibh hendrerit fermentum. Quisque eget tortor venenatis, tempus velit at, lacinia urna. Cras egestas vehicula leo a ultricies.
+                                          Quisque nec iaculis sem. Integer scelerisque elementum nisl id hendrerit. Sed tincidunt nisl sed commodo vehicula. Nulla non ultricies urna. 
+                                         Ut mollis lacinia sem ac fermentum. Maecenas fermentum nisi eget consectetur facilisis.
+                       
+											Ut ipsum turpis, accumsan et imperdiet eget, gravida vitae tellus. Curabitur vel justo suscipit, egestas nisl ut, vestibulum erat. 
+											Curabitur congue aliquet erat, eget vulputate mauris posuere venenatis. Quisque hendrerit velit eget velit luctus condimentum vel venenatis odio. 
+											Proin eget nisi sed leo aliquet euismod porta a lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada diam eu ante 
+											celerisque dapibus. Sed at velit sagittis massa semper luctus vitae et nulla. Duis consectetur sit amet libero ac sodales. Nulla augue sem, fringilla ac nunc a, 
+											congue tincidunt lectus. Aenean sagittis nibh ut arcu rhoncus, in venenatis arcu interdum.</p>
+				</div>
+		 	 	<div class="col-md-1">&nbsp;</div>
+			  </div>
+			 <div class="row">
+			 	<div class="col-md-12 text-align-center">
+			 		<h1>Gallery</h1>
+			 	</div>
+			 </div>
+			 <div class="row background-black">
+			 	<div class="row">&nbsp;</div>
+			 	<div class="col-md-12">
+			 		<div class="row">
+			 			<div class="col-md-1">&nbsp;</div>
+			 			<div class="col-md-3"><img src="img/gallery-1.JPG" /></div>
+			 			<div class="col-md-3"><img src="img/gallery-2.JPG" /></div>
+			 			<div class="col-md-3"><img src="img/gallery-3.JPG" /></div>
+			 			<div class="col-md-1">&nbsp;</div>
+			 		</div>
+			 		<div class="row">
+			 			<div class="col-md-1">&nbsp;</div>
+			 			<div class="col-md-3"><img src="img/gallery-4.JPG" /></div>
+			 			<div class="col-md-3"><img src="img/gallery-5.JPG" /></div>
+			 			<div class="col-md-3"><img src="img/gallery-6.JPG" /></div>
+			 			<div class="col-md-1">&nbsp;</div>
+			 		</div>
+			 		<div class="row">
+			 			<div class="col-md-1">&nbsp;</div>
+			 			<div class="col-md-3"><img src="img/gallery-7.JPG" /></div>
+			 			<div class="col-md-3"><img src="img/gallery-8.JPG" /></div>
+			 			<div class="col-md-3"><img src="img/gallery-9.JPG" /></div>
+			 			<div class="col-md-1">&nbsp;</div>
+			 		</div>
+			 	</div>
+			 	<div class="row">&nbsp;</div>
+			 </div>
+			 <div class="row">
+			 	<div class="col-md-12">
+			 		<!--bottom shape + button -->
+			 	</div>
+			 </div>	   
+			</div>
 		</div>
 
 	</div>
 
 	<div class="section s4">
 		<div class="inner">
+		<div class="container-fluid">
+			 	 <div class="row">
+			 	 	<div class="col-md-1">&nbsp;</div>
+				 	<div class="col-md-10"><h1>OUR PARTNERS</h1></div>
+			 	 	<div class="col-md-1">&nbsp;</div>
+				 </div>
+				 <div class="row">
+			 	 	<div class="col-md-1">&nbsp;</div>
+				 	<div class="col-md-5">
+				 		<div class="row">
+				 			<div class="col-md-6"><img src="img/telus.JPG" /></div>
+				 			<div class="col-md-6"><img src="img/niu.JPG" /></div>
+				 		</div>
+				 		<div class="row">
+				 			<div class="col-md-6"><img src="img/flybits.JPG" /></div>
+				 			<div class="col-md-6"><img src="img/rbc.JPG" /></div>
+				 		</div>
+				 		<div class="row">
+				 			<div class="col-md-6"><img src="img/ontario_science_center.JPG" /></div>
+				 			<div class="col-md-6"><img src="img/zoo.JPG" /></div>
+				 		</div>
+				 	</div>
+				 	<div class="col-md-5">
+				 						<img src="img/red_flag_deals.JPG" />
+				 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta aliquet nisl, nec placerat nisi viverra eget. 
+			  		                     Curabitur sed hendrerit ligula. Duis vulputate, justo eget condimentum elementum, urna massa pharetra sapien, eu volutpat felis leo eu est. 
+                                         lass aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque tempus, felis a aliquet porttitor, metus massa sodales nisi, suscipit venenatis 
+                                         ipsum arcu et eros. Suspendisse pulvinar nulla tristique nibh hendrerit fermentum. Quisque eget tortor venenatis, tempus velit at, lacinia urna. Cras egestas vehicula leo a ultricies.
+                                          Quisque nec iaculis sem. Integer scelerisque elementum nisl id hendrerit. Sed tincidunt nisl sed commodo vehicula. Nulla non ultricies urna. 
+                                         Ut mollis lacinia sem ac fermentum. Maecenas fermentum nisi eget consectetur facilisis.
+                       
+											Ut ipsum turpis, accumsan et imperdiet eget, gravida vitae tellus. Curabitur vel justo suscipit, egestas nisl ut, vestibulum erat. 
+											Curabitur congue aliquet erat, eget vulputate mauris posuere venenatis. Quisque hendrerit velit eget velit luctus condimentum vel venenatis odio. 
+											Proin eget nisi sed leo aliquet euismod porta a lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada diam eu ante 
+											celerisque dapibus. Sed at velit sagittis massa semper luctus vitae et nulla. Duis consectetur sit amet libero ac sodales. Nulla augue sem, fringilla ac nunc a, 
+											congue tincidunt lectus. Aenean sagittis nibh ut arcu rhoncus, in venenatis arcu interdum.</p></div>
+				 </div>
+ 		 	 	<div class="col-md-1">&nbsp;</div>
 
-		<h1>Partners</h1>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/><br/><br /><br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/><br/><br /><br/>
+	 			<div class="row background-blue text-align-center">
+	 				<div class="col-md-12"><h1>INTERESTED IN BECOMING A PARTNER?</h1></div>
+	 			</div>
+	 			<div class="row">
+	 				<div class="col-md-1">&nbsp;</div>
+	 				<div class="col-md-10">
+	 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta aliquet nisl, nec placerat nisi viverra eget. 
+			  		                     Curabitur sed hendrerit ligula. Duis vulputate, justo eget condimentum elementum, urna massa pharetra sapien, eu volutpat felis leo eu est. 
+                                         lass aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque tempus, felis a aliquet porttitor, metus massa sodales nisi, suscipit venenatis 
+                                         ipsum arcu et eros. Suspendisse pulvinar nulla tristique nibh hendrerit fermentum. Quisque eget tortor venenatis, tempus velit at, lacinia urna. Cras egestas vehicula leo a ultricies.
+                                          Quisque nec iaculis sem. Integer scelerisque elementum nisl id hendrerit. Sed tincidunt nisl sed commodo vehicula. Nulla non ultricies urna. 
+                                         Ut mollis lacinia sem ac fermentum. Maecenas fermentum nisi eget consectetur facilisis.
+                       
+											Ut ipsum turpis, accumsan et imperdiet eget, gravida vitae tellus. Curabitur vel justo suscipit, egestas nisl ut, vestibulum erat. 
+											Curabitur congue aliquet erat, eget vulputate mauris posuere venenatis. Quisque hendrerit velit eget velit luctus condimentum vel venenatis odio. 
+											Proin eget nisi sed leo aliquet euismod porta a lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada diam eu ante 
+											celerisque dapibus. Sed at velit sagittis massa semper luctus vitae et nulla. Duis consectetur sit amet libero ac sodales. Nulla augue sem, fringilla ac nunc a, 
+											congue tincidunt lectus. Aenean sagittis nibh ut arcu rhoncus, in venenatis arcu interdum.</p>
+	 				
+	 				<div class="cold-md-1">&nbsp;</div>
+	 			</div>	
+	 			<div class="row background-blue text-align-center">
+	 				<div class="col-md-12">click here for package</div>
+	 			</div>
+	 	</div>		   
 		</div>
-
 	</div>
 
 	<div class="section s5">
 		<div class="inner">
-
-			<h1>What is Happening Now</h1>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/><br/><br /><br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/><br/><br /><br/>
+			<div class="container-fluid background-black">
+			 	<div class="row text-align-center">
+				 	<div class="col-md-12"><h1>SEE WHAT IS HAPPENING RIGHT NOW</h1></div>
+				</div>
+				<div class="row">&nbsp;</div>
+				<div class="row">
+					<div class="col-md-1">&nbsp;</div>
+				 	<div class="col-md-4"><img src="img/tim-hortons.JPG" /></div>
+				 	<div class="col-md-6"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta aliquet nisl, nec placerat nisi viverra eget. 
+			  		                     Curabitur sed hendrerit ligula. Duis vulputate, justo eget condimentum elementum, urna massa pharetra sapien, eu volutpat felis leo eu est. 
+                                         lass aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque tempus, felis a aliquet porttitor, metus massa sodales nisi, suscipit venenatis 
+                                         ipsum arcu et eros. Suspendisse pulvinar nulla tristique nibh hendrerit fermentum. Quisque eget tortor venenatis, tempus velit at, lacinia urna. Cras egestas vehicula leo a ultricies.
+                                          Quisque nec iaculis sem. Integer scelerisque elementum nisl id hendrerit. Sed tincidunt nisl sed commodo vehicula. Nulla non ultricies urna. 
+                                         Ut mollis lacinia sem ac fermentum. Maecenas fermentum nisi eget consectetur facilisis.</p></div>
+                    <div class="col-md-1">&nbsp;</div>
+				</div>
+				<div class="row">&nbsp;</div>
+				<div class="row text-align-center">
+				 	<div class="col-md-1">&nbsp;</div>
+				 	<div class="col-md-10"><h3>WHAT ARE YOU WAITING FOR?</h3></div>
+				 	<div class="col-md-1">&nbsp;</div>
+				</div>
+				<div class="row text-align-center">
+				 	<div class="col-md-1">&nbsp;</div>
+				 	<div class="col-md-10"><h3>JOIN NOW!</h3></div>
+				 	<div class="col-md-1">&nbsp;</div>
+				</div>
+				<div class="row text-align-center">
+				 	<div class="col-md-1">&nbsp;</div>
+				 	<div class="col-md-10"><img src="img/E3-Logo.png" /></div>
+				 	<div class="col-md-1">&nbsp;</div>
+				</div>
+				<div class="row">
+					<div class="col-md-1">&nbsp;</div>
+				 	<div class="col-md-2">Contact US</div>
+				 	<div class="col-md-6">&nbsp;</div>
+				 	<div class="col-md-2">&nbsp;</div>
+				 	<div class="col-md-1">&nbsp;</div>
+				</div>
+					<div class="row">
+					<div class="col-md-1">&nbsp;</div>
+				 	<div class="col-md-2">info@e3challenge.com</div>
+				 	<div class="col-md-6">&nbsp;</div>
+				 	<div class="col-md-2">
+				 		<div class="row">
+				 			<div class="col-md-4"><img src="img/facebook.jpg" /></div>
+				 			<div class="col-md-4"><img src="img/youtube.jpg" /></div>
+				 			<div class="col-md-4"><img src="img/twitter.jpg" /></div>
+				 		</div>
+				 	</div>
+				 	<div class="col-md-1">&nbsp;</div>
+				</div>
+				<div class="row text-align-center">
+				 	<div class="col-md-1">&nbsp;</div>
+				 	<div class="col-md-10">Brought to you by</div>
+				 	<div class="col-md-1">&nbsp;</div>
+				</div>
+				<div class="row text-align-center">
+				 	<div class="col-md-1">&nbsp;</div>
+				 	<div class="col-md-10">power unit image</div>
+				 	<div class="col-md-1">&nbsp;</div>
+				</div>
+	 		</div>		   
 		</div>
-
 	</div>	
 
 </div>
