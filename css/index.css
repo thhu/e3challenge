@@ -1,0 +1,29 @@
+body {
+	background: black;
+}
+
+.collapse.navbar-collapse {
+	background: black;
+}
+
+#subMenu {
+	height:184px;
+	float: right;
+	padding-top: 69px;
+	letter-spacing: 5px;
+	font-size:13pt;
+}
+
+li > a.subNavBtn  {
+	padding:5px 15px 5px 15px;
+}
+
+li:not(:first-child) > a.subNavBtn  {
+	border-left:1px solid white;
+}
+
+.navbar-brand {
+	padding-top:69px;
+	font-size: 50pt;
+	font-family: 'Century Gothic';
+}
