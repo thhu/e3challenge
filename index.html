@@ -16,8 +16,10 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.css">
-        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-image-gallery.min.css">
+        <link rel="stylesheet" href="css/blueimp-gallery.min.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <script type="text/javascript" 	src="js/vendor/jquery-1.10.2.min.js"></script>
         <script type="text/javascript" 	src="js/vendor/jquery.smint.js"></script>
@@ -28,6 +30,7 @@
 		    $('#subMenu').smint({
 		    	'scrollSpeed' : 1000
 		    });
+		    $('.carousel').carousel();
 		});
 		</script>
 
@@ -48,6 +51,10 @@
 			div.background-blue {
 				background-color: #3399cc;
 				color: white; 
+			}
+			div.background-white{
+				background-color: white;
+				color: black; 
 			}
 			div.trapez{
 			     width:100px; 
@@ -111,6 +118,57 @@
 				border-top: 30px solid red;
 				border-right: 30px solid transparent;
 			}
+			
+			.carousel .item {
+			    width: 100%; /*slider width*/
+			    max-height: 600px; /*slider height*/
+			}
+			.carousel .item img {
+			    width: 100%; /*img width*/
+			}
+			/*add some makeup*/
+			.carousel .carousel-control {
+				width: 100px;
+			    background: none;
+			    border: none;
+			    top: 50%;
+			}
+			/*full width container*/
+			@media (max-width: 767px) {
+			    .block {
+			        margin-left: -20px;
+			        margin-right: -20px;
+			    }
+			}
+			.carousel-control .icon-next, .carousel-control .glyphicon-chevron-right{
+				right: 0%;
+			}
+			.carousel-control .icon-next, .carousel-control .glyphicon-chevron-left{
+				left: 0%;
+			}
+			.carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right{
+				position:relative;
+			}
+			span.the-class{
+				font-size:x-small;
+				position:relative;
+				bottom:10px;			
+			}
+			.carousel-caption {
+			  position: relative;
+			  left: 0%;
+			  right: 0%;
+			  bottom: 0px;
+			  z-index: 10;
+			  padding-top: 0px;
+			  padding-bottom: 0px;
+			  color: #000;
+			  text-shadow: none;
+			}
+			.btn-info{
+				background-color:#3399cc;
+				border-color:#3399cc;
+			}
 		</style>
 
     </head>
@@ -120,6 +178,40 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
+        <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+		<div id="blueimp-gallery" class="blueimp-gallery">
+		    <!-- The container for the modal slides -->
+		    <div class="slides"></div>
+		    <!-- Controls for the borderless lightbox -->
+		    <h3 class="title"></h3>
+		    <a class="prev">‹</a>
+		    <a class="next">›</a>
+		    <a class="close">×</a>
+		    <a class="play-pause"></a>
+		    <ol class="indicator"></ol>
+		    <!-- The modal dialog, which will be used to wrap the lightbox content -->
+		    <div class="modal fade">
+		        <div class="modal-dialog">
+		            <div class="modal-content">
+		                <div class="modal-header">
+		                    <button type="button" class="close" aria-hidden="true">&times;</button>
+		                    <h4 class="modal-title"></h4>
+		                </div>
+		                <div class="modal-body next"></div>
+		                <div class="modal-footer">
+		                    <button type="button" class="btn btn-default pull-left prev">
+		                        <i class="glyphicon glyphicon-chevron-left"></i>
+		                        Previous
+		                    </button>
+		                    <button type="button" class="btn btn-primary next">
+		                        Next
+		                        <i class="glyphicon glyphicon-chevron-right"></i>
+		                    </button>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
        <div class="wrap">
        	
        	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -132,69 +224,45 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><img src="img/E3-Icon.png" />Challenge</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav" id="subMenu">
+      	<li><a class="navbar-brand" id="s1" href="#" class="subNavBtn"><span class="the-class">The</span><img src="img/E3-Icon.png" />Challenge</a></li>
         <li><a href="#" id="s1" class="subNavBtn">HOME</a></li>
 		<li><a href="#" id="s2" class="subNavBtn">CHALLENGE</a></li>
 		<li><a href="#" id="s3" class="subNavBtn">PARTNERS</a></li>
 		<li><a href="#" id="s4" class="subNavBtn">JOIN</a></li>
-		<li><a href="#" id="s5" class="subNavBtn end">CONTACT</a></li>
+		<li><a href="#" id="s4" class="subNavBtn end">CONTACT</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
 
-	<div class="section s1 container">
+	<div class="section s1">
+		
 		<div class="inner">
 
-			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-    			    <!-- Indicators -->
-  			      <ol class="carousel-indicators">
-    			      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-      			    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-     			     <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-     			   </ol>
-
-    			    <!-- Wrapper for slides -->
-    			    <div class="carousel-inner">
-   			       <div class="item active">
-   			         <img src="img/img_1.jpg">
-    			        <div class="carousel-caption">
-    			          <h3>Header</h3>
-    			          <center><p>WordsWords WordsWords WordsWords WordsWords WordsWords WordsWords WordsWords WordsWords Words</p></center>
-    			        </div>
-    			      </div>
-    			      <div class="item">
-    			        <img src="img/img_2.jpg">
-    			        <div class="carousel-caption">
-    			          <h3>Header</h3>
-     			         <center><p>WordsWords WordsWords WordsWords WordsWords WordsWords WordsWords WordsWords WordsWords Words</p></center>
-       			     </div>
-      			    </div>
-       			   <div class="item">
-        			    <img src="img/img_3.jpg">
-        			    <div class="carousel-caption">
-        			      <h3>Header</h3>
-         			     <center><p>WordsWords WordsWords WordsWords WordsWords WordsWords WordsWords WordsWords WordsWords Words</p></center>
-         			   </div>
-       			   </div>
-     			   </div>
-
-      			  <!-- Controls -->
-        			<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-      			    <span class="glyphicon glyphicon-chevron-left"></span>
-      			  </a>
-      			  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-       			   <span class="glyphicon glyphicon-chevron-right"></span>
-     			   </a>
-     			 </div>
-   			 </div>
-
+			<section class="block">
+		    <div id="myCarousel" class="carousel slide">
+		        <div class="carousel-inner">
+		            <div class="active item">
+		                <img src="img/img_1.jpg" alt="Slide1" />
+		            </div>
+		            <div class="item">
+		                <img src="img/img_2.jpg" alt="Slide2" />
+		            </div>
+		            <div class="item">
+		                <img src="img/img_3.jpg" alt="Slide3" />
+		            </div>
+		        </div>
+		        <a class="carousel-control left" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+		 		<a class="carousel-control right" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></a>
+		
+		    </div>
+			</section>
 		</div> <!-- close inner --> 
 	</div>
 
@@ -238,16 +306,8 @@
 			  	</div>
 		 	 	<div class="col-md-1">&nbsp;</div>
 			  </div>
-			</div>
-
-		</div>
-
-	</div>
-
-	<div class="section s3">
-		<div class="inner">
-			<div class="container-fluid">
-			  <div class="row" id="mentors">
+			  
+			  <div class="row background-white">
 		 	 	<div class="col-md-1">&nbsp;</div>
 			  	<div class="col-md-1">
 			  		<h1>Mentors</h1>
@@ -255,11 +315,12 @@
 			  	<div class="col-md-10">&nbsp;</div>
 		 	 	<div class="col-md-1">&nbsp;</div>
 			  </div>
-			  <div class="row">&nbsp;</div>
-			  <div class="row">
+			 
+			  <div class="row background-white">&nbsp;</div>
+			  <div class="row background-white">
 		 	 	<div class="col-md-1">&nbsp;</div>
-			  	<div class="col-md-2"><img src="img/face-edited.jpg" /></div>
-			  	<div class="col-md-6"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta aliquet nisl, nec placerat nisi viverra eget. 
+			  	<div class="col-md-3"><img class="img-rounded" src="img/face-edited.jpg" /></div>
+			  	<div class="col-md-7"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta aliquet nisl, nec placerat nisi viverra eget. 
 			  		                     Curabitur sed hendrerit ligula. Duis vulputate, justo eget condimentum elementum, urna massa pharetra sapien, eu volutpat felis leo eu est. 
                                          lass aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque tempus, felis a aliquet porttitor, metus massa sodales nisi, suscipit venenatis 
                                          ipsum arcu et eros. Suspendisse pulvinar nulla tristique nibh hendrerit fermentum. Quisque eget tortor venenatis, tempus velit at, lacinia urna. Cras egestas vehicula leo a ultricies.
@@ -271,9 +332,30 @@
 											Proin eget nisi sed leo aliquet euismod porta a lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada diam eu ante 
 											celerisque dapibus. Sed at velit sagittis massa semper luctus vitae et nulla. Duis consectetur sit amet libero ac sodales. Nulla augue sem, fringilla ac nunc a, 
 											congue tincidunt lectus. Aenean sagittis nibh ut arcu rhoncus, in venenatis arcu interdum.</p>
-				</div>
+											<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#more-mentors">More Mentors</button>
+		 	 	</div>
 		 	 	<div class="col-md-1">&nbsp;</div>
 			  </div>
+			  <div class="row background-white">&nbsp;</div>
+			  <div id="more-mentors" class="row collapse background-white">
+			  	<div class="col-md-1">&nbsp;</div>
+			  	<div class="col-md-3"><img class="img-rounded" src="img/face-edited.jpg" /></div>
+			  	<div class="col-md-7"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta aliquet nisl, nec placerat nisi viverra eget. 
+			  		                     Curabitur sed hendrerit ligula. Duis vulputate, justo eget condimentum elementum, urna massa pharetra sapien, eu volutpat felis leo eu est. 
+                                         lass aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque tempus, felis a aliquet porttitor, metus massa sodales nisi, suscipit venenatis 
+                                         ipsum arcu et eros. Suspendisse pulvinar nulla tristique nibh hendrerit fermentum. Quisque eget tortor venenatis, tempus velit at, lacinia urna. Cras egestas vehicula leo a ultricies.
+                                          Quisque nec iaculis sem. Integer scelerisque elementum nisl id hendrerit. Sed tincidunt nisl sed commodo vehicula. Nulla non ultricies urna. 
+                                         Ut mollis lacinia sem ac fermentum. Maecenas fermentum nisi eget consectetur facilisis.
+                       
+											Ut ipsum turpis, accumsan et imperdiet eget, gravida vitae tellus. Curabitur vel justo suscipit, egestas nisl ut, vestibulum erat. 
+											Curabitur congue aliquet erat, eget vulputate mauris posuere venenatis. Quisque hendrerit velit eget velit luctus condimentum vel venenatis odio. 
+											Proin eget nisi sed leo aliquet euismod porta a lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada diam eu ante 
+											celerisque dapibus. Sed at velit sagittis massa semper luctus vitae et nulla. Duis consectetur sit amet libero ac sodales. Nulla augue sem, fringilla ac nunc a, 
+											congue tincidunt lectus. Aenean sagittis nibh ut arcu rhoncus, in venenatis arcu interdum.</p>
+		 	 	</div>
+		 	 	<div class="col-md-1">&nbsp;</div>
+			  </div>
+			  <div class="row background-white">&nbsp;</div>
 			 <div class="row">
 			 	<div class="col-md-12 text-align-center">
 			 		<h1>Gallery</h1>
@@ -284,23 +366,68 @@
 			 	<div class="col-md-12">
 			 		<div class="row">
 			 			<div class="col-md-1">&nbsp;</div>
-			 			<div class="col-md-3"><img src="img/gallery-1.JPG" /></div>
-			 			<div class="col-md-3"><img src="img/gallery-2.JPG" /></div>
-			 			<div class="col-md-3"><img src="img/gallery-3.JPG" /></div>
+			 			<div class="col-md-3">
+			 				<div id="links">
+				 				<a href="img/gallery-1.JPG" title="e3-challenge-1" data-gallery>
+	        					<img src="img/gallery-1.JPG" alt="e3-challenge-1"></a>
+        					</div>
+        				</div>
+			 			<div class="col-md-3">
+			 				<div id="links">
+				 				<a href="img/gallery-2.JPG" title="e3-challenge-2" data-gallery>
+	        					<img src="img/gallery-2.JPG" alt="e3-challenge-2"></a>
+        					</div>
+			 			</div>
+			 			<div class="col-md-3">
+			 				<div id="links">
+				 				<a href="img/gallery-3.JPG" title="e3-challenge-3" data-gallery>
+	        					<img src="img/gallery-3.JPG" alt="e3-challenge-3"></a>
+        					</div>
+			 			</div>
 			 			<div class="col-md-1">&nbsp;</div>
 			 		</div>
 			 		<div class="row">
 			 			<div class="col-md-1">&nbsp;</div>
-			 			<div class="col-md-3"><img src="img/gallery-4.JPG" /></div>
-			 			<div class="col-md-3"><img src="img/gallery-5.JPG" /></div>
-			 			<div class="col-md-3"><img src="img/gallery-6.JPG" /></div>
+			 			<div class="col-md-3">
+			 				<div id="links">
+				 				<a href="img/gallery-4.JPG" title="e3-challenge-4" data-gallery>
+	        					<img src="img/gallery-4.JPG" alt="e3-challenge-4"></a>
+        					</div>
+			 			</div>
+			 			<div class="col-md-3">
+			 				<div id="links">
+				 				<a href="img/gallery-5.JPG" title="e3-challenge-5" data-gallery>
+	        					<img src="img/gallery-5.JPG" alt="e3-challenge-5"></a>
+        					</div>
+			 			</div>
+			 			<div class="col-md-3">
+			 				<div id="links">
+				 				<a href="img/gallery-6.JPG" title="e3-challenge-6" data-gallery>
+	        					<img src="img/gallery-6.JPG" alt="e3-challenge-6"></a>
+        					</div>
+			 			</div>
 			 			<div class="col-md-1">&nbsp;</div>
 			 		</div>
 			 		<div class="row">
 			 			<div class="col-md-1">&nbsp;</div>
-			 			<div class="col-md-3"><img src="img/gallery-7.JPG" /></div>
-			 			<div class="col-md-3"><img src="img/gallery-8.JPG" /></div>
-			 			<div class="col-md-3"><img src="img/gallery-9.JPG" /></div>
+			 			<div class="col-md-3">
+			 				<div id="links">
+				 				<a href="img/gallery-7.JPG" title="e3-challenge-7" data-gallery>
+	        					<img src="img/gallery-7.JPG" alt="e3-challenge-7"></a>
+        					</div>
+			 			</div>
+			 			<div class="col-md-3">
+			 				<div id="links">
+				 				<a href="img/gallery-8.JPG" title="e3-challenge-8" data-gallery>
+	        					<img src="img/gallery-8.JPG" alt="e3-challenge-8"></a>
+        					</div>
+			 			</div>
+			 			<div class="col-md-3">
+			 				<div id="links">
+				 				<a href="img/gallery-9.JPG" title="e3-challenge-9" data-gallery>
+	        					<img src="img/gallery-9.JPG" alt="e3-challenge-9"></a>
+        					</div>
+			 			</div>
 			 			<div class="col-md-1">&nbsp;</div>
 			 		</div>
 			 	</div>
@@ -316,9 +443,9 @@
 
 	</div>
 
-	<div class="section s4">
+	<div class="section s3">
 		<div class="inner">
-		<div class="container-fluid">
+			<div class="container-fluid">
 			 	 <div class="row">
 			 	 	<div class="col-md-1">&nbsp;</div>
 				 	<div class="col-md-10"><h1>OUR PARTNERS</h1></div>
@@ -379,40 +506,78 @@
 	 				<div class="cold-md-1">&nbsp;</div>
 	 			</div>	
 	 			<div class="row background-blue text-align-center">
-	 				<div class="col-md-12">click here for package</div>
+	 				<div class="col-md-4">&nbsp;</div>
+	 				<div class="col-md-4"><a href="files/2014E3EventPackage.pdf" class="btn btn-default">Click Here for Package</a></div>
+	 				<div class="col-md-4">&nbsp;</div>
 	 			</div>
+	 			<div class="row background-blue">&nbsp;</div>
 	 	</div>		   
 		</div>
-	</div>
 
-	<div class="section s5">
-		<div class="inner">
-			<div class="container-fluid background-black">
 			 	<div class="row text-align-center">
 				 	<div class="col-md-12"><h1>SEE WHAT IS HAPPENING RIGHT NOW</h1></div>
 				</div>
 				<div class="row">&nbsp;</div>
-				<div class="row">
-					<div class="col-md-1">&nbsp;</div>
-				 	<div class="col-md-4"><img src="img/tim-hortons.JPG" /></div>
-				 	<div class="col-md-6"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta aliquet nisl, nec placerat nisi viverra eget. 
-			  		                     Curabitur sed hendrerit ligula. Duis vulputate, justo eget condimentum elementum, urna massa pharetra sapien, eu volutpat felis leo eu est. 
-                                         lass aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque tempus, felis a aliquet porttitor, metus massa sodales nisi, suscipit venenatis 
-                                         ipsum arcu et eros. Suspendisse pulvinar nulla tristique nibh hendrerit fermentum. Quisque eget tortor venenatis, tempus velit at, lacinia urna. Cras egestas vehicula leo a ultricies.
-                                          Quisque nec iaculis sem. Integer scelerisque elementum nisl id hendrerit. Sed tincidunt nisl sed commodo vehicula. Nulla non ultricies urna. 
-                                         Ut mollis lacinia sem ac fermentum. Maecenas fermentum nisi eget consectetur facilisis.</p></div>
-                    <div class="col-md-1">&nbsp;</div>
-				</div>
+				 <div class="row">
+			  	<div class="col-md-12">
+			  		<section class="block">
+				    <div id="Carousel" class="carousel slide">
+				        <div class="carousel-inner">
+				            <div class="active item">
+				            	<div class="holder col-sm-8">
+				                <img src="img/img_1.jpg" alt="Slide1" />
+				                </div>
+				                <div class="col-sm-4">
+								    <div class="carousel-caption background-white">
+								        <h2>Slide 1</h2>
+								        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+								    </div>
+							  	</div>
+				            </div>
+				            <div class="item">
+				            	<div class="holder col-sm-8">
+				                	<img src="img/img_2.jpg" alt="Slide2" />
+				                </div>
+				                <div class="col-sm-4">
+								    <div class="carousel-caption background-white">
+								        <h2>Slide 2</h2>
+								        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+								    </div>
+							  	</div>
+				            </div>
+				            <div class="item">
+				            	<div class="holder col-sm-8">
+				                	<img src="img/img_3.jpg" alt="Slide3" />
+				                </div>
+				                <div class="col-sm-4">
+								    <div class="carousel-caption background-white">
+								        <h2>Slide 3</h2>
+								        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>  
+								    </div>
+							  	</div>
+				            </div>
+				        </div>
+				        <a class="carousel-control left" href="#Carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+				 		<a class="carousel-control right" href="#Carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></a>
+				    </div>
+					</section>
+			  	</div>
+			  </div>
 				<div class="row">&nbsp;</div>
+		</div>
+	</div>
+		<div class="section s4">
+		<div class="inner">
+			<div class="container-fluid background-white">
 				<div class="row text-align-center">
 				 	<div class="col-md-1">&nbsp;</div>
 				 	<div class="col-md-10"><h3>WHAT ARE YOU WAITING FOR?</h3></div>
 				 	<div class="col-md-1">&nbsp;</div>
 				</div>
 				<div class="row text-align-center">
-				 	<div class="col-md-1">&nbsp;</div>
-				 	<div class="col-md-10"><h3>JOIN NOW!</h3></div>
-				 	<div class="col-md-1">&nbsp;</div>
+				 	<div class="col-md-4">&nbsp;</div>
+				 	<div class="col-md-4"><a class="btn btn-lg btn-block btn-info" href="files/e3application2014form.xlsx">JOIN NOW!</a></div>
+				 	<div class="col-md-4">&nbsp;</div>
 				</div>
 				<div class="row text-align-center">
 				 	<div class="col-md-1">&nbsp;</div>
@@ -446,14 +611,17 @@
 				</div>
 				<div class="row text-align-center">
 				 	<div class="col-md-1">&nbsp;</div>
-				 	<div class="col-md-10">power unit image</div>
+				 	<div class="col-md-10"><img src="img/pu.jpg" /></div>
 				 	<div class="col-md-1">&nbsp;</div>
 				</div>
+				<div class="row">&nbsp;</div>
 	 		</div>		   
 		</div>
 	</div>	
 
 </div>
+		<script src="js/jquery.blueimp-gallery.min.js"></script>
+		<script src="js/bootstrap-image-gallery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/vendor/plugins.js"></script>
         <script src="js/vendor/main.js"></script>
