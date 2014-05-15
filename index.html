@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>E3 Challenge Dev</title>
+        <title>E3 Challenge</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,6 +21,7 @@
         <link rel="stylesheet" href="css/bootstrap-image-gallery.min.css">
         <link rel="stylesheet" href="css/blueimp-gallery.min.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <link rel="icon" type="img/png" href="img/icons/E3_small_icon.png">
         <script type="text/javascript" 	src="js/vendor/jquery-1.10.2.min.js"></script>
         <script type="text/javascript" 	src="js/vendor/jquery.smint.js"></script>
         <script type="text/javascript" 	src="js/vendor/bootstrap.min.js"></script>
@@ -73,6 +74,9 @@
 			div.text-align-center{
 				text-align:center;
 			}
+			div.text-align-right{
+				text-align:right;
+			}
 			#triangle-topleft {
 				width: 0;
 				height: 0;
@@ -118,13 +122,32 @@
 				border-top: 30px solid red;
 				border-right: 30px solid transparent;
 			}
-			
-			.carousel .item {
-			    width: 100%; /*slider width*/
-			    max-height: 600px; /*slider height*/
+			.carousel {
+				height: 100%;
 			}
+			@media (min-width: 992px){
+				.carousel .item {
+			    width: 100%; /*slider width*/
+			    max-height: 800px; /*slider height*/
+				}
+			
+			}
+			@media (min-width: 1400px) and (max-width:2000px){
+				.carousel .item {
+			    width: 100%; /*slider width*/
+			    max-height: 800px; /*slider height*/
+				}
+			}
+			@media (min-width: 992px) and (max-width:1400px){
+				.carousel .item {
+			    width: 100%; /*slider width*/
+			    max-height: 700px; /*slider height*/
+				}
+			}
+			
 			.carousel .item img {
 			    width: 100%; /*img width*/
+			   	height: 100%;
 			}
 			/*add some makeup*/
 			.carousel .carousel-control {
@@ -168,6 +191,30 @@
 			.btn-info{
 				background-color:#3399cc;
 				border-color:#3399cc;
+			}
+			.subNavBtn{
+				padding-top:27px;
+			}
+			.padding-top{
+				padding-top:10px;
+				padding-right:20px;
+			}
+			.padding-bottom{
+				padding-top:70px;
+			}
+			.text-align-left{
+				text-align: left;
+			}
+			.padding-bottom-more{
+				padding-top:70px;
+			}
+			span.red{
+				color:red;
+			}
+			img.top-bar{
+				position:relative;
+				bottom:5px;
+				left:5px;
 			}
 		</style>
 
@@ -228,14 +275,18 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse">
+    
       <ul class="nav navbar-nav" id="subMenu">
-      	<li><a class="navbar-brand" id="s1" href="#" class="subNavBtn"><span class="the-class">The</span><img src="img/E3-Icon.png" />Challenge</a></li>
+      	<li><a class="navbar-brand" id="s1" href="#" class="subNavBtn"><span class="the-class">The</span><img class="top-bar" src="img/icons/E3_updated_logo.png"/></a></li>
         <li><a href="#" id="s1" class="subNavBtn">HOME</a></li>
-		<li><a href="#" id="s2" class="subNavBtn">CHALLENGE</a></li>
-		<li><a href="#" id="s3" class="subNavBtn">PARTNERS</a></li>
-		<li><a href="#" id="s4" class="subNavBtn">JOIN</a></li>
-		<li><a href="#" id="s4" class="subNavBtn end">CONTACT</a></li>
+		<li><a href="#" id="s2" class="subNavBtn">ABOUT THE CHALLENGE</a></li>
+		<li><a href="#" id="s3" class="subNavBtn">PAST MENTORS</a></li>
+		<li><a href="#" id="s4" class="subNavBtn">GALLERY</a></li>
+		<li><a href="#" id="s5" class="subNavBtn">PAST PARTNERS</a></li>
+		<li><a href="#" id="s6" class="subNavBtn">JOIN US</a></li>
+		<li><a href="mailto:e3challenge@power-unit.org" class="subNavBtn end">CONTACT US</a></li>
       </ul>
+      <div class="text-align-right padding-top"><a href="https://www.facebook.com/e3challenge"><img src="img/icons/facebook_dark_25.png" /></a>&nbsp;&nbsp;<a href="https://twitter.com/E3challenge"><img src="img/icons/twitter_dark_25.png" /></a>&nbsp;&nbsp;<a href="http://power-unit.org"><img src="img/icons/PUYO_Logo_25.png"></a></div>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
@@ -249,13 +300,16 @@
 		    <div id="myCarousel" class="carousel slide">
 		        <div class="carousel-inner">
 		            <div class="active item">
-		                <img src="img/img_1.jpg" alt="Slide1" />
+		                <img src="img/slider/slider-1.jpg" alt="Slide1" />
 		            </div>
 		            <div class="item">
-		                <img src="img/img_2.jpg" alt="Slide2" />
+		                <img src="img/slider/slider-2.jpg" alt="Slide2" />
 		            </div>
 		            <div class="item">
-		                <img src="img/img_3.jpg" alt="Slide3" />
+		                <img src="img/slider/slider-3.jpg" alt="Slide3" />
+		            </div>
+		            <div class="item">
+		            	<img src="img/slider/slider-4.jpg" alt="Slide3" />
 		            </div>
 		        </div>
 		        <a class="carousel-control left" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
@@ -273,7 +327,7 @@
 			  <div class="row">
 		 	 	<div class="col-md-1">&nbsp;</div>
 			  	<div class="col-md-10">
-			  		<h1>The Challenge</h1>
+			  		<h1>About the Challenge</h1>
 			  	</div>
 			  	<div class="col-md-1">&nbsp;</div>
 			  </div>
@@ -297,212 +351,226 @@
 			  <div class="row">
 		 	 	<div class="col-md-1">&nbsp;</div>
 			  	<div class="col-md-10">
-			  		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta aliquet nisl, nec placerat nisi viverra eget. 
-			  		                     Curabitur sed hendrerit ligula. Duis vulputate, justo eget condimentum elementum, urna massa pharetra sapien, eu volutpat felis leo eu est. 
-                                         lass aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque tempus, felis a aliquet porttitor, metus massa sodales nisi, suscipit venenatis 
-                                         ipsum arcu et eros. Suspendisse pulvinar nulla tristique nibh hendrerit fermentum. Quisque eget tortor venenatis, tempus velit at, lacinia urna. Cras egestas vehicula leo a ultricies.
-                                          Quisque nec iaculis sem. Integer scelerisque elementum nisl id hendrerit. Sed tincidunt nisl sed commodo vehicula. Nulla non ultricies urna. 
-                                         Ut mollis lacinia sem ac fermentum. Maecenas fermentum nisi eget consectetur facilisis.</p>
+			  		<p>Entrepreneurship. Empowerment. Excellence.</p>
+			  		<p>Put your skills to test with The E3 Challenge! Every summer, energetic and committed youth between the ages of 16-20 are divided into teams to compete with one another in three distinct business challenges - each with its own unique characteristics. The challenges range from direct sales to new product development proposals. Working in real-life situations not only helps our participants broaden their technical skills, it also gives them an opportunity to build new friendships and develop important "soft" skills that are often overlooked.</p>
+			  		<p>In addition to the challenge, a support system of mentors, workshops and seminars makes this competition a valuable learning experience. Judged on leadership, adaptability and teamwork, a winning team is selected at the end of three rounds of competition.</p>
+			  		<p>The E3 Challenge is a leadership development project under Power Unit Youth Organization. It was created to support Power Unit Youth Organization's mission by promoting entrepreneurship, empowerment and excellence in youth.</p>
 			  	</div>
 		 	 	<div class="col-md-1">&nbsp;</div>
 			  </div>
+			  <div class="row">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<div class="section s3">
+		<div class="inner">
+			<div class="container-fluid">
 			  
 			  <div class="row background-white">
 		 	 	<div class="col-md-1">&nbsp;</div>
-			  	<div class="col-md-1">
-			  		<h1>Mentors</h1>
+			  	<div class="col-md-3">
+			  		<h1>Past Mentors</h1>
 			  	</div>
-			  	<div class="col-md-10">&nbsp;</div>
+			  	<div class="col-md-7">&nbsp;</div>
 		 	 	<div class="col-md-1">&nbsp;</div>
 			  </div>
 			 
 			  <div class="row background-white">&nbsp;</div>
 			  <div class="row background-white">
 		 	 	<div class="col-md-1">&nbsp;</div>
-			  	<div class="col-md-3"><img class="img-rounded" src="img/face-edited.jpg" /></div>
-			  	<div class="col-md-7"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta aliquet nisl, nec placerat nisi viverra eget. 
-			  		                     Curabitur sed hendrerit ligula. Duis vulputate, justo eget condimentum elementum, urna massa pharetra sapien, eu volutpat felis leo eu est. 
-                                         lass aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque tempus, felis a aliquet porttitor, metus massa sodales nisi, suscipit venenatis 
-                                         ipsum arcu et eros. Suspendisse pulvinar nulla tristique nibh hendrerit fermentum. Quisque eget tortor venenatis, tempus velit at, lacinia urna. Cras egestas vehicula leo a ultricies.
-                                          Quisque nec iaculis sem. Integer scelerisque elementum nisl id hendrerit. Sed tincidunt nisl sed commodo vehicula. Nulla non ultricies urna. 
-                                         Ut mollis lacinia sem ac fermentum. Maecenas fermentum nisi eget consectetur facilisis.
-                       
-											Ut ipsum turpis, accumsan et imperdiet eget, gravida vitae tellus. Curabitur vel justo suscipit, egestas nisl ut, vestibulum erat. 
-											Curabitur congue aliquet erat, eget vulputate mauris posuere venenatis. Quisque hendrerit velit eget velit luctus condimentum vel venenatis odio. 
-											Proin eget nisi sed leo aliquet euismod porta a lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada diam eu ante 
-											celerisque dapibus. Sed at velit sagittis massa semper luctus vitae et nulla. Duis consectetur sit amet libero ac sodales. Nulla augue sem, fringilla ac nunc a, 
-											congue tincidunt lectus. Aenean sagittis nibh ut arcu rhoncus, in venenatis arcu interdum.</p>
-											<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#more-mentors">More Mentors</button>
+		 	 	<div class="col-md-3"><img class="img-rounded" src="img/mentor_profile/roman_3.png" /></div>
+			  	<div class="col-md-7">
+			  		<h2>Roman Cezar</h2>
+			  		<p>As a mentor, you are given the chance to have an impact on the growth of your mentees. 
+			  			You are able to share your experience and knowledge with them. When taking a close 
+			  			look at their behaviours, you also take the time to look back at your own. Not only 
+			  			is it a development opportunity for your mentees, it is also one for yourself. You 
+			  			look back at how you communicate with them; discovering what is the most effective 
+			  			way to get your message across and get your team to see you point. It is also a chance 
+			  			for you to develop your EQ, as sympathy and understanding play an important role when 
+			  			trying to push them forward. Finally, you have a chance to take part in the amazing 
+			  			challenges that your team is on. Frankly, I wish that I had the opportunities presented 
+			  			to them when I was their age!</p>
+			  			<button type="button" class="btn btn-info" data-toggle="collapse" data-target=".more-mentors">More Mentors</button>
 		 	 	</div>
 		 	 	<div class="col-md-1">&nbsp;</div>
 			  </div>
 			  <div class="row background-white">&nbsp;</div>
-			  <div id="more-mentors" class="row collapse background-white">
+			  <div id="more-mentors" class="row collapse background-white more-mentors">
 			  	<div class="col-md-1">&nbsp;</div>
-			  	<div class="col-md-3"><img class="img-rounded" src="img/face-edited.jpg" /></div>
-			  	<div class="col-md-7"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta aliquet nisl, nec placerat nisi viverra eget. 
-			  		                     Curabitur sed hendrerit ligula. Duis vulputate, justo eget condimentum elementum, urna massa pharetra sapien, eu volutpat felis leo eu est. 
-                                         lass aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque tempus, felis a aliquet porttitor, metus massa sodales nisi, suscipit venenatis 
-                                         ipsum arcu et eros. Suspendisse pulvinar nulla tristique nibh hendrerit fermentum. Quisque eget tortor venenatis, tempus velit at, lacinia urna. Cras egestas vehicula leo a ultricies.
-                                          Quisque nec iaculis sem. Integer scelerisque elementum nisl id hendrerit. Sed tincidunt nisl sed commodo vehicula. Nulla non ultricies urna. 
-                                         Ut mollis lacinia sem ac fermentum. Maecenas fermentum nisi eget consectetur facilisis.
-                       
-											Ut ipsum turpis, accumsan et imperdiet eget, gravida vitae tellus. Curabitur vel justo suscipit, egestas nisl ut, vestibulum erat. 
-											Curabitur congue aliquet erat, eget vulputate mauris posuere venenatis. Quisque hendrerit velit eget velit luctus condimentum vel venenatis odio. 
-											Proin eget nisi sed leo aliquet euismod porta a lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada diam eu ante 
-											celerisque dapibus. Sed at velit sagittis massa semper luctus vitae et nulla. Duis consectetur sit amet libero ac sodales. Nulla augue sem, fringilla ac nunc a, 
-											congue tincidunt lectus. Aenean sagittis nibh ut arcu rhoncus, in venenatis arcu interdum.</p>
+			  	<div class="col-md-3"><img class="img-rounded" src="img/mentor_profile/gary.png" /></div>
+			  	<div class="col-md-7">
+			  		
+			  		<h2>Gary Li</h2>
+			  		<p>As an E3 Mentor, I was pleasantly reminded of the creativity and resourcefulness 
+			  			of which young individuals are capable.  Some of my participants impressed me with 
+			  			their ambition and leadership potential.  Others impressed me with their efficiency 
+			  			and project management skills.  All of them impressed me with their courage to overcome 
+			  			their weaknesses and fears as they became more confident in themselves.</p>
+			  		<p> My team won the 
+			  			2013 E3 Challenge, but win or lose, I could not be more proud of their development as individuals 
+			  			and as a team.  Three of my participants have immediately moved on to take important leadership 
+			  			roles in the E3 Challenge organizing team or other areas of PUYO.</p>
+			  		<p> The experience was equally rewarding 
+			  			for me, as I had the opportunity to work with other strong mentors and a pair of very dedicated peer 
+			  			advisors who care greatly about youth development.</p>
 		 	 	</div>
 		 	 	<div class="col-md-1">&nbsp;</div>
 			  </div>
 			  <div class="row background-white">&nbsp;</div>
+			  <div id="more-mentors" class="row collapse background-white more-mentors">
+			  	<div class="col-md-1">&nbsp;</div>
+			  	<div class="col-md-3"><img class="img-rounded" src="img/mentor_profile/matt.png" /></div>
+			  	<div class="col-md-7">
+			  		<h2>Matthew Wai</h2>
+			  		<p>The challenges definitely contributed to my team’s development in ways that the normal 
+			  			school curriculum would never have.  I think some of the most important skills in 
+			  			today’s society are adaptation and teamwork. Although it may not have been a highlighted 
+			  			development skill in E3, it is vital to the younger generation.  Businesses are starting 
+			  			to use social media, working with people across the globe, and assigning tasks that an 
+			  			employee may not have been normally responsible for.  I feel that in order to succeed in 
+			  			today’s market, a candidate’s soft skills are just as, if not more important than their 
+			  			technical skills.  The E3 was able to challenge my team by having them work with different 
+			  			personalities, adapt to the quickly changing environment of “Night It Up” on a daily basis, 
+			  			and most importantly, work in a team to accomplish the challenge.  As many members of my 
+			  			team quickly learned, these challenges are not able to be completed by themselves (like some 
+			  			high school projects) and must utilize their team members. The teams that were able to 
+			  			identify a team leader and work effectively together typically came out stronger in 
+			  			presenting their challenges. </p>
+		 	 	</div>
+		 	 	<div class="col-md-1">&nbsp;</div>
+			  </div>
+			  <div class="row background-white">&nbsp;</div>
+			</div>
+		 </div>
+		</div>
+		<div class="section s4">
+			<div class="inner">
+			<div class="container-fluid">
 			 <div class="row">
 			 	<div class="col-md-12 text-align-center">
 			 		<h1>Gallery</h1>
 			 	</div>
 			 </div>
+			 <div class="row background-black">&nbsp;</div>
 			 <div class="row background-black">
-			 	<div class="row">&nbsp;</div>
-			 	<div class="col-md-12">
-			 		<div class="row">
-			 			<div class="col-md-1">&nbsp;</div>
-			 			<div class="col-md-3">
-			 				<div id="links">
-				 				<a href="img/gallery-1.JPG" title="e3-challenge-1" data-gallery>
-	        					<img src="img/gallery-1.JPG" alt="e3-challenge-1"></a>
-        					</div>
-        				</div>
-			 			<div class="col-md-3">
-			 				<div id="links">
-				 				<a href="img/gallery-2.JPG" title="e3-challenge-2" data-gallery>
-	        					<img src="img/gallery-2.JPG" alt="e3-challenge-2"></a>
-        					</div>
-			 			</div>
-			 			<div class="col-md-3">
-			 				<div id="links">
-				 				<a href="img/gallery-3.JPG" title="e3-challenge-3" data-gallery>
-	        					<img src="img/gallery-3.JPG" alt="e3-challenge-3"></a>
-        					</div>
-			 			</div>
-			 			<div class="col-md-1">&nbsp;</div>
-			 		</div>
-			 		<div class="row">
-			 			<div class="col-md-1">&nbsp;</div>
-			 			<div class="col-md-3">
-			 				<div id="links">
-				 				<a href="img/gallery-4.JPG" title="e3-challenge-4" data-gallery>
-	        					<img src="img/gallery-4.JPG" alt="e3-challenge-4"></a>
-        					</div>
-			 			</div>
-			 			<div class="col-md-3">
-			 				<div id="links">
-				 				<a href="img/gallery-5.JPG" title="e3-challenge-5" data-gallery>
-	        					<img src="img/gallery-5.JPG" alt="e3-challenge-5"></a>
-        					</div>
-			 			</div>
-			 			<div class="col-md-3">
-			 				<div id="links">
-				 				<a href="img/gallery-6.JPG" title="e3-challenge-6" data-gallery>
-	        					<img src="img/gallery-6.JPG" alt="e3-challenge-6"></a>
-        					</div>
-			 			</div>
-			 			<div class="col-md-1">&nbsp;</div>
-			 		</div>
-			 		<div class="row">
-			 			<div class="col-md-1">&nbsp;</div>
-			 			<div class="col-md-3">
-			 				<div id="links">
-				 				<a href="img/gallery-7.JPG" title="e3-challenge-7" data-gallery>
-	        					<img src="img/gallery-7.JPG" alt="e3-challenge-7"></a>
-        					</div>
-			 			</div>
-			 			<div class="col-md-3">
-			 				<div id="links">
-				 				<a href="img/gallery-8.JPG" title="e3-challenge-8" data-gallery>
-	        					<img src="img/gallery-8.JPG" alt="e3-challenge-8"></a>
-        					</div>
-			 			</div>
-			 			<div class="col-md-3">
-			 				<div id="links">
-				 				<a href="img/gallery-9.JPG" title="e3-challenge-9" data-gallery>
-	        					<img src="img/gallery-9.JPG" alt="e3-challenge-9"></a>
-        					</div>
-			 			</div>
-			 			<div class="col-md-1">&nbsp;</div>
-			 		</div>
+			 	<div class="col-md-4">
+					<div id="links">
+				 		<a href="img/gallery/gallery-1.jpg" title="" data-gallery>
+	        			<img src="img/gallery/gallery-1t.jpg" alt="e3-challenge-1"></a>
+        			</div>
+        		</div>
+			 	<div class="col-md-4">
+			 		<div id="links">
+				 		<a href="img/gallery/gallery-2.jpg" title="" data-gallery>
+	        			<img src="img/gallery/gallery-2t.jpg" alt="e3-challenge-2"></a>
+        			</div>
 			 	</div>
-			 	<div class="row">&nbsp;</div>
+			 	<div class="col-md-4">
+			 		<div id="links">
+				 		<a href="img/gallery/gallery-3.jpg" title="" data-gallery>
+	        			<img src="img/gallery/gallery-3t.jpg" alt="e3-challenge-3"></a>
+        			</div>
+			 	</div>
 			 </div>
-			 <div class="row">
-			 	<div class="col-md-12">
-			 		<!--bottom shape + button -->
+			 <div class="row background-black">&nbsp;</div>
+			 <div class="row background-black">
+			 	<div class="col-md-4">
+			 		<div id="links">
+						<a href="img/gallery/gallery-4.jpg" title="" data-gallery>
+	        			<img src="img/gallery/gallery-4t.jpg" alt="e3-challenge-4"></a>
+        			</div>
 			 	</div>
-			 </div>	   
-			</div>
-		</div>
-
+			 	<div class="col-md-4">
+			 		<div id="links">
+				 		<a href="img/gallery/gallery-5.jpg" title="" data-gallery>
+	        			<img src="img/gallery/gallery-5t.jpg" alt="e3-challenge-5"></a>
+        			</div>
+			 	</div>
+			 	<div class="col-md-4">
+			 		<div id="links">
+						<a href="img/gallery/gallery-6.jpg" title="" data-gallery>
+	        			<img src="img/gallery/gallery-6t.jpg" alt="e3-challenge-6"></a>
+        			</div>
+			 	</div>
+			 </div>			 		
+			 <div class="row background-black">&nbsp;</div>
+			 <div class="row background-black">
+			 	<div class="col-md-4">
+			 		<div id="links">
+				 		<a href="img/gallery/gallery-7.jpg" title="" data-gallery>
+	        			<img src="img/gallery/gallery-7t.jpg" alt="e3-challenge-7"></a>
+        			</div>
+			 	</div>
+			 	<div class="col-md-4">
+			 		<div id="links">
+				 		<a href="img/gallery/gallery-8.jpg" title="" data-gallery>
+	        			<img src="img/gallery/gallery-8t.jpg" alt="e3-challenge-8"></a>
+        			</div>
+			 	</div>
+			 	<div class="col-md-4">
+			 		<div id="links">
+				 		<a href="img/gallery/gallery-9.jpg" title="" data-gallery>
+	        			<img src="img/gallery/gallery-9t.jpg" alt="e3-challenge-9"></a>
+        			</div>
+			 	</div>
+			 </div>
+			<div class="row background-black">&nbsp;</div>
+			</div><!-- closes big column -->
+		 </div><!-- close big row -->	   
 	</div>
-
-	<div class="section s3">
+	<div class="section s5">
 		<div class="inner">
 			<div class="container-fluid">
 			 	 <div class="row">
 			 	 	<div class="col-md-1">&nbsp;</div>
-				 	<div class="col-md-10"><h1>OUR PARTNERS</h1></div>
+				 	<div class="col-md-10"><h1>PAST PARTNERS</h1></div>
 			 	 	<div class="col-md-1">&nbsp;</div>
 				 </div>
 				 <div class="row">
 			 	 	<div class="col-md-1">&nbsp;</div>
 				 	<div class="col-md-5">
+				 		<div class="row">&nbsp;</div>
 				 		<div class="row">
-				 			<div class="col-md-6"><img src="img/telus.JPG" /></div>
-				 			<div class="col-md-6"><img src="img/niu.JPG" /></div>
+				 			<div class="col-md-6 text-center"><img src="img/logo/red_flag_deals_logo1.png" /></div>
+				 			<div class="col-md-6 text-center"><img src="img/logo/flybits_logo1.png" /></div>
 				 		</div>
+				 		<div class="row">&nbsp;</div>
 				 		<div class="row">
-				 			<div class="col-md-6"><img src="img/flybits.JPG" /></div>
-				 			<div class="col-md-6"><img src="img/rbc.JPG" /></div>
+				 			<div class="col-md-6 text-center"><img src="img/logo/osc_logo1.png" /></div>
+				 			<div class="col-md-6 text-center"><img src="img/logo/tzoo_logo1.png" /></div>
 				 		</div>
+				 		<div class="row">&nbsp;</div>
 				 		<div class="row">
-				 			<div class="col-md-6"><img src="img/ontario_science_center.JPG" /></div>
-				 			<div class="col-md-6"><img src="img/zoo.JPG" /></div>
+				 			<div class="col-md-6 text-center"><img src="img/logo/NIU_logo1.png" /></div>
+				 			<div class="col-md-6 text-center"><img src="img/logo/rbc_logo1.png" /></div>
 				 		</div>
+				 		<div class="row">&nbsp;</div>
+				 		
 				 	</div>
 				 	<div class="col-md-5">
-				 						<img src="img/red_flag_deals.JPG" />
-				 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta aliquet nisl, nec placerat nisi viverra eget. 
-			  		                     Curabitur sed hendrerit ligula. Duis vulputate, justo eget condimentum elementum, urna massa pharetra sapien, eu volutpat felis leo eu est. 
-                                         lass aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque tempus, felis a aliquet porttitor, metus massa sodales nisi, suscipit venenatis 
-                                         ipsum arcu et eros. Suspendisse pulvinar nulla tristique nibh hendrerit fermentum. Quisque eget tortor venenatis, tempus velit at, lacinia urna. Cras egestas vehicula leo a ultricies.
-                                          Quisque nec iaculis sem. Integer scelerisque elementum nisl id hendrerit. Sed tincidunt nisl sed commodo vehicula. Nulla non ultricies urna. 
-                                         Ut mollis lacinia sem ac fermentum. Maecenas fermentum nisi eget consectetur facilisis.
-                       
-											Ut ipsum turpis, accumsan et imperdiet eget, gravida vitae tellus. Curabitur vel justo suscipit, egestas nisl ut, vestibulum erat. 
-											Curabitur congue aliquet erat, eget vulputate mauris posuere venenatis. Quisque hendrerit velit eget velit luctus condimentum vel venenatis odio. 
-											Proin eget nisi sed leo aliquet euismod porta a lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada diam eu ante 
-											celerisque dapibus. Sed at velit sagittis massa semper luctus vitae et nulla. Duis consectetur sit amet libero ac sodales. Nulla augue sem, fringilla ac nunc a, 
-											congue tincidunt lectus. Aenean sagittis nibh ut arcu rhoncus, in venenatis arcu interdum.</p></div>
+				 						<img src="img/logo/telus_logo1.png" />
+				 						<blockquote>
+				 						<p>“On behalf of the TELUS team, I had a great time working with the E3 organizing primes and student teams. We were very impressed by the detailed marketing strategies that the teams developed under tight timelines and the level of professionalism showcased during the challenge presentations. Not only did the students highlight new marketing insights that we will incorporate into future campaigns, but it was also very rewarding to see the students develop their marketing skills during the challenge. Congrats and a job well done to all the 2013 E3 teams!”
+											
+										</p>
+										</blockquote>
+										<p>-          Ashley Cameron, Multicultural Marketing, TELUS</p>
+										
+			</div>
 				 </div>
  		 	 	<div class="col-md-1">&nbsp;</div>
-
+				<div class="row">&nbsp;</div>
 	 			<div class="row background-blue text-align-center">
 	 				<div class="col-md-12"><h1>INTERESTED IN BECOMING A PARTNER?</h1></div>
 	 			</div>
 	 			<div class="row">
 	 				<div class="col-md-1">&nbsp;</div>
 	 				<div class="col-md-10">
-	 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta aliquet nisl, nec placerat nisi viverra eget. 
-			  		                     Curabitur sed hendrerit ligula. Duis vulputate, justo eget condimentum elementum, urna massa pharetra sapien, eu volutpat felis leo eu est. 
-                                         lass aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque tempus, felis a aliquet porttitor, metus massa sodales nisi, suscipit venenatis 
-                                         ipsum arcu et eros. Suspendisse pulvinar nulla tristique nibh hendrerit fermentum. Quisque eget tortor venenatis, tempus velit at, lacinia urna. Cras egestas vehicula leo a ultricies.
-                                          Quisque nec iaculis sem. Integer scelerisque elementum nisl id hendrerit. Sed tincidunt nisl sed commodo vehicula. Nulla non ultricies urna. 
-                                         Ut mollis lacinia sem ac fermentum. Maecenas fermentum nisi eget consectetur facilisis.
-                       
-											Ut ipsum turpis, accumsan et imperdiet eget, gravida vitae tellus. Curabitur vel justo suscipit, egestas nisl ut, vestibulum erat. 
-											Curabitur congue aliquet erat, eget vulputate mauris posuere venenatis. Quisque hendrerit velit eget velit luctus condimentum vel venenatis odio. 
-											Proin eget nisi sed leo aliquet euismod porta a lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada diam eu ante 
-											celerisque dapibus. Sed at velit sagittis massa semper luctus vitae et nulla. Duis consectetur sit amet libero ac sodales. Nulla augue sem, fringilla ac nunc a, 
-											congue tincidunt lectus. Aenean sagittis nibh ut arcu rhoncus, in venenatis arcu interdum.</p>
-
+	 					<p><strong>Hands-On Projects - </strong>Assist E3 participants in obtaining practical experience through working with your company’s established product lines and services. Allow the youths to implement their ideas and observe the results of their efforts first hand.</p>
+						<p><strong>Professional Feedback - </strong>Take part in evaluating E3 participants’ performance. Provide professional feedback to E3 participants and help them further their development.</p>
+						<p><strong>Invest in Our Community’s Youths - </strong>Your participation in The E3 Challenge provides a valuable learning experience to many ambitious youths. Cookie-cutter type textbook education no longer suffices in equipping youths with the necessary tools to succeed. Help us make learning fun and project your company as the driving force behind youth-empowering initiatives.</p>
+						<p><strong>Reach Out to the Youth Market - </strong>Through the projects, allow the youths to familiarize with your products and services first hand. Get them involved, engaged, and leave a lasting impression!</p>
 	 				<div class="cold-md-1">&nbsp;</div>
 	 			</div>	
 	 			<div class="row background-blue text-align-center">
@@ -513,107 +581,79 @@
 	 			<div class="row background-blue">&nbsp;</div>
 	 	</div>		   
 		</div>
-
+		</div>
+	</div>
+	<div class="section s6">
+		<div class="inner">
+			<div class="container-fluid">
+				<div class="row">&nbsp;</div>
+				<div class="row">&nbsp;</div>
 			 	<div class="row text-align-center">
-				 	<div class="col-md-12"><h1>SEE WHAT IS HAPPENING RIGHT NOW</h1></div>
+				 	<div class="col-md-12"><h1>INTERESTED IN BECOMING A PARTICIPANT?</h1></div>
 				</div>
 				<div class="row">&nbsp;</div>
 				 <div class="row">
-			  	<div class="col-md-12">
-			  		<section class="block">
+				<div class="col-md-1">&nbsp;</div>
+			  	<div class="col-md-10">
+			  		<!--<section class="block">
 				    <div id="Carousel" class="carousel slide">
 				        <div class="carousel-inner">
 				            <div class="active item">
-				            	<div class="holder col-sm-8">
-				                <img src="img/img_1.jpg" alt="Slide1" />
+				            	<div class="holder col-sm-4">
 				                </div>
-				                <div class="col-sm-4">
-								    <div class="carousel-caption background-white">
-								        <h2>Slide 1</h2>
-								        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
-								    </div>
-							  	</div>
-				            </div>
-				            <div class="item">
-				            	<div class="holder col-sm-8">
-				                	<img src="img/img_2.jpg" alt="Slide2" />
-				                </div>
-				                <div class="col-sm-4">
-								    <div class="carousel-caption background-white">
-								        <h2>Slide 2</h2>
-								        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
-								    </div>
-							  	</div>
-				            </div>
-				            <div class="item">
-				            	<div class="holder col-sm-8">
-				                	<img src="img/img_3.jpg" alt="Slide3" />
-				                </div>
-				                <div class="col-sm-4">
-								    <div class="carousel-caption background-white">
-								        <h2>Slide 3</h2>
-								        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>  
+				                <div class="col-sm-8">
+								    <div class="carousel-caption background-white text-align-left">
 								    </div>
 							  	</div>
 				            </div>
 				        </div>
-				        <a class="carousel-control left" href="#Carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
 				 		<a class="carousel-control right" href="#Carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></a>
 				    </div>
 					</section>
+					-->
+					<h2>PARTICIPANT REQUIREMENTS:</h2>
+								    	Are you…
+								    	<ul>
+								    		<li>a high school or university student aged 16-20 (or turning 21 this summer)?</li>
+								    		<li>inspired by the words entrepreneurship, empowerment, and excellence?</li>
+								    		<li>creative and someone who thinks outside of the box?</li>
+								    		<li>striving to be one of the leaders of tomorrow?</li>
+								    		<li>going to be in Toronto this summer?</li>
+								    	</ul>    
+								    	<h2>HOW TO APPLY:</h2>
+								    	<ol>
+								    		<li>Download the application form.</li>
+								    		<li>Attach your resume to the application form and submit them by Sunday, June 1, 2014, 11:59PM. Please e-mail both the application form and your resume to e3challenge@power-unit.org.
+								    			<br><strong>Note:</strong> You will receive a confirmation e-mail within 24 hours after your submission. If not, please contact us at e3challenge@power-unit.org.
+								    		</li>
+								    		<li>
+								    			Those who submitted an application will be arranged for interviews shortly after their submission.
+								    			<ul>
+								    				<li>In-person interviews dates: June 6 to 7, 2014</li>
+								    				<li>Phone interviews dates: June 14 to 15, 2014</li>
+								    			</ul>
+								    		</li>
+								    		<li>Successful applicants will be contacted by Sunday, June 22, 2014 and will need to attend the mandatory orientation and training session on Saturday, June 28, 2014.</li>
+								    		<li>There will be a $20 program fee for successful applicants.</li>
+								    	</ol>   
+										
 			  	</div>
-			  </div>
+			  	<div class="col-md-1">&nbsp;</div>
+				</div>
 				<div class="row">&nbsp;</div>
-		</div>
-	</div>
-		<div class="section s4">
-		<div class="inner">
-			<div class="container-fluid background-white">
-				<div class="row text-align-center">
-				 	<div class="col-md-1">&nbsp;</div>
-				 	<div class="col-md-10"><h3>WHAT ARE YOU WAITING FOR?</h3></div>
-				 	<div class="col-md-1">&nbsp;</div>
-				</div>
-				<div class="row text-align-center">
-				 	<div class="col-md-4">&nbsp;</div>
-				 	<div class="col-md-4"><a class="btn btn-lg btn-block btn-info" href="files/e3application2014form.xlsx">JOIN NOW!</a></div>
-				 	<div class="col-md-4">&nbsp;</div>
-				</div>
-				<div class="row text-align-center">
-				 	<div class="col-md-1">&nbsp;</div>
-				 	<div class="col-md-10"><img src="img/E3-Logo.png" /></div>
-				 	<div class="col-md-1">&nbsp;</div>
-				</div>
 				<div class="row">
+					<div class="col-md-12 text-align-center">
+						<a class="btn btn-lg btn-info text" href="files/e3application2014form.xlsx">Download Application Form</a>
+					</div>
+				</div>
+				<div class="row">&nbsp;</div>
+				<div class="row text-align-right">
 					<div class="col-md-1">&nbsp;</div>
-				 	<div class="col-md-2">Contact US</div>
-				 	<div class="col-md-6">&nbsp;</div>
-				 	<div class="col-md-2">&nbsp;</div>
+					<div class="col-md-6 padding-bottom-more text-align-left"> <img src="img/E3_logo_updated.png" alt="Slide1" /><br>Contact us: <a href="mailto:e3challenge@power-unit.org">e3challenge@power-unit.org</a></div>
+					<div class="col-md-4 padding-bottom"><a href="http://power-unit.org"><img src="img/logo/pu.jpg" /></a></div>
 				 	<div class="col-md-1">&nbsp;</div>
 				</div>
-					<div class="row">
-					<div class="col-md-1">&nbsp;</div>
-				 	<div class="col-md-2">info@e3challenge.com</div>
-				 	<div class="col-md-6">&nbsp;</div>
-				 	<div class="col-md-2">
-				 		<div class="row">
-				 			<div class="col-md-4"><img src="img/facebook.jpg" /></div>
-				 			<div class="col-md-4"><img src="img/youtube.jpg" /></div>
-				 			<div class="col-md-4"><img src="img/twitter.jpg" /></div>
-				 		</div>
-				 	</div>
-				 	<div class="col-md-1">&nbsp;</div>
-				</div>
-				<div class="row text-align-center">
-				 	<div class="col-md-1">&nbsp;</div>
-				 	<div class="col-md-10">Brought to you by</div>
-				 	<div class="col-md-1">&nbsp;</div>
-				</div>
-				<div class="row text-align-center">
-				 	<div class="col-md-1">&nbsp;</div>
-				 	<div class="col-md-10"><img src="img/pu.jpg" /></div>
-				 	<div class="col-md-1">&nbsp;</div>
-				</div>
+				<div class="row">&nbsp;</div>
 				<div class="row">&nbsp;</div>
 	 		</div>		   
 		</div>
