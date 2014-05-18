@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta>
         <title>E3 Challenge</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +18,6 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-image-gallery.min.css">
         <link rel="stylesheet" href="css/blueimp-gallery.min.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <link rel="icon" type="img/png" href="img/icons/E3_small_icon.png">
@@ -37,21 +36,21 @@
 
 		<style type="text/css">
 			.carousel-inner > .item > img { margin: 0 auto; }
-			div.section.s2 {
-				background-color: black;
-				color: white;
-			}
 			#mentors{
 				background-color: #999999;
 				color: white;
 			}
 			div.background-black {
-				background-color: black;
+				background-color: #000000;
 				color: white; 
 			}
 			div.background-blue {
 				background-color: #3399cc;
 				color: white; 
+			}
+			div.background-blue-text-black{
+				background-color: #3399cc;
+				color:black;
 			}
 			div.background-white{
 				background-color: white;
@@ -216,6 +215,15 @@
 				bottom:5px;
 				left:5px;
 			}
+			img.img-full{
+				width:100%;
+			}
+			.padding-none{
+				padding-top:0px;
+				padding-bottom:0px;
+				padding-left:0px;
+				padding-right:0px;
+			}
 		</style>
 
     </head>
@@ -225,44 +233,19 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
-		<div id="blueimp-gallery" class="blueimp-gallery">
-		    <!-- The container for the modal slides -->
+        <div id="blueimp-gallery" class="blueimp-gallery">
 		    <div class="slides"></div>
-		    <!-- Controls for the borderless lightbox -->
 		    <h3 class="title"></h3>
 		    <a class="prev">‹</a>
 		    <a class="next">›</a>
 		    <a class="close">×</a>
 		    <a class="play-pause"></a>
 		    <ol class="indicator"></ol>
-		    <!-- The modal dialog, which will be used to wrap the lightbox content -->
-		    <div class="modal fade">
-		        <div class="modal-dialog">
-		            <div class="modal-content">
-		                <div class="modal-header">
-		                    <button type="button" class="close" aria-hidden="true">&times;</button>
-		                    <h4 class="modal-title"></h4>
-		                </div>
-		                <div class="modal-body next"></div>
-		                <div class="modal-footer">
-		                    <button type="button" class="btn btn-default pull-left prev">
-		                        <i class="glyphicon glyphicon-chevron-left"></i>
-		                        Previous
-		                    </button>
-		                    <button type="button" class="btn btn-primary next">
-		                        Next
-		                        <i class="glyphicon glyphicon-chevron-right"></i>
-		                    </button>
-		                </div>
-		            </div>
-		        </div>
-		    </div>
 		</div>
-       <div class="wrap">
+<div class="wrap">
        	
        	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container-fluid">
+  		<div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -277,7 +260,7 @@
     <div class="collapse navbar-collapse">
     
       <ul class="nav navbar-nav" id="subMenu">
-      	<li><a class="navbar-brand" id="s1" href="#" class="subNavBtn"><span class="the-class">The</span><img class="top-bar" src="img/icons/E3_updated_logo.png"/></a></li>
+      	<li><a class="navbar-brand" id="s1" href="#" class="subNavBtn"><span class="the-class">The</span><img class="top-bar" src="img/icons/E3_updated_logo.png" alt="e3 challenge"/></a></li>
         <li><a href="#" id="s1" class="subNavBtn">HOME</a></li>
 		<li><a href="#" id="s2" class="subNavBtn">ABOUT THE CHALLENGE</a></li>
 		<li><a href="#" id="s3" class="subNavBtn">PAST MENTORS</a></li>
@@ -286,69 +269,75 @@
 		<li><a href="#" id="s6" class="subNavBtn">JOIN US</a></li>
 		<li><a href="mailto:e3challenge@power-unit.org" class="subNavBtn end">CONTACT US</a></li>
       </ul>
-      <div class="text-align-right padding-top"><a href="https://www.facebook.com/e3challenge"><img src="img/icons/facebook_dark_25.png" /></a>&nbsp;&nbsp;<a href="https://twitter.com/E3challenge"><img src="img/icons/twitter_dark_25.png" /></a>&nbsp;&nbsp;<a href="http://power-unit.org"><img src="img/icons/PUYO_Logo_25.png"></a></div>
+      <div class="text-align-right padding-top">
+      	<a href="https://www.facebook.com/e3challenge"><img src="img/icons/facebook_dark_25.png" alt="facebook"/></a>
+      	&nbsp;&nbsp;
+      	<a href="https://twitter.com/E3challenge"><img src="img/icons/twitter_dark_25.png"  alt="twitter"/></a>
+      	&nbsp;&nbsp;
+      	<a href="http://power-unit.org"><img src="img/icons/PUYO_Logo_25.png" alt="PUYO"></a>
+      </div>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
 
 	<div class="section s1">
-		
 		<div class="inner">
-
-			<section class="block">
-		    <div id="myCarousel" class="carousel slide">
-		        <div class="carousel-inner">
-		            <div class="active item">
-		                <img src="img/slider/slider-1.jpg" alt="Slide1" />
-		            </div>
-		            <div class="item">
-		                <img src="img/slider/slider-2.jpg" alt="Slide2" />
-		            </div>
-		            <div class="item">
-		                <img src="img/slider/slider-3.jpg" alt="Slide3" />
-		            </div>
-		            <div class="item">
-		            	<img src="img/slider/slider-4.jpg" alt="Slide3" />
-		            </div>
-		        </div>
-		        <a class="carousel-control left" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-		 		<a class="carousel-control right" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></a>
-		
-		    </div>
-			</section>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12 padding-none">
+					    <div id="myCarousel" class="carousel slide">
+					        <div class="carousel-inner">
+					            <div class="active item">
+					                <img src="img/slider/slider-1.jpg" alt="Slide1" />
+					            </div>
+					            <div class="item">
+					                <img src="img/slider/slider-2.jpg" alt="Slide2" />
+					            </div>
+					            <div class="item">
+					                <img src="img/slider/slider-3.jpg" alt="Slide3" />
+					            </div>
+					            <div class="item">
+					            	<img src="img/slider/slider-4.jpg" alt="Slide3" />
+					            </div>
+					        </div>
+					        <a class="carousel-control left" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+					 		<a class="carousel-control right" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+					
+					   </div>
+				   </div>
+		   </div>
+		 </div><!-- close containter-fluid -->
 		</div> <!-- close inner --> 
 	</div>
 
 	<div class="section s2">
-
 		<div class="inner">
 			<div class="container-fluid">
-			  <div class="row">
+			  <div class="row background-black">
 		 	 	<div class="col-md-1">&nbsp;</div>
 			  	<div class="col-md-10">
 			  		<h1>About the Challenge</h1>
 			  	</div>
 			  	<div class="col-md-1">&nbsp;</div>
 			  </div>
-			  <div class="row">
+			  <div class="row background-black">
 		 	 	<div class="col-md-1">&nbsp;</div>
-			  	<div class="col-md-1">&nbsp;</div>
 			  	<div class="col-md-10"><img src="img/e3-3.JPG"/>&nbsp;Business Challenges</div>
 		 	 	<div class="col-md-1">&nbsp;</div>
 			  </div>
-			  <div class="row">
+			  <div class="row background-black">
 		 	 	<div class="col-md-4">&nbsp;</div>
 			  	<div class="col-md-7"><img src="img/e3-2.JPG"/>&nbsp;Summer Months</div>
 		 	 	<div class="col-md-1">&nbsp;</div>
 			  </div>
-			  <div class="row">
+			  <div class="row background-black">
 			  	<div class="col-md-6">&nbsp;</div>
 			  	<div class="col-md-4"><img src="img/e3-1.JPG"/>&nbsp;Winning Team</div>
-			  	<div class="col-md-1">&nbsp;</div>
+			  	<div class="col-md-2">&nbsp;</div>
 			  </div>
-			  <div class="row">&nbsp;</div>
-			  <div class="row">
+			  <div class="row background-black">&nbsp;</div>
+			  <div class="row background-black">
 		 	 	<div class="col-md-1">&nbsp;</div>
 			  	<div class="col-md-10">
 			  		<p>Entrepreneurship. Empowerment. Excellence.</p>
@@ -358,14 +347,13 @@
 			  	</div>
 		 	 	<div class="col-md-1">&nbsp;</div>
 			  </div>
-			  <div class="row">&nbsp;</div>
+			  <div class="row background-black">&nbsp;</div>
 			</div>
 		</div>
 	</div>
 	<div class="section s3">
 		<div class="inner">
 			<div class="container-fluid">
-			  
 			  <div class="row background-white">
 		 	 	<div class="col-md-1">&nbsp;</div>
 			  	<div class="col-md-3">
@@ -374,7 +362,6 @@
 			  	<div class="col-md-7">&nbsp;</div>
 		 	 	<div class="col-md-1">&nbsp;</div>
 			  </div>
-			 
 			  <div class="row background-white">&nbsp;</div>
 			  <div class="row background-white">
 		 	 	<div class="col-md-1">&nbsp;</div>
@@ -398,7 +385,7 @@
 			  <div class="row background-white">&nbsp;</div>
 			  <div id="more-mentors" class="row collapse background-white more-mentors">
 			  	<div class="col-md-1">&nbsp;</div>
-			  	<div class="col-md-3"><img class="img-rounded" src="img/mentor_profile/gary.png" /></div>
+			  	<div class="col-md-3"><img class="img-rounded" src="img/mentor_profile/gary.png"/></div>
 			  	<div class="col-md-7">
 			  		
 			  		<h2>Gary Li</h2>
@@ -441,6 +428,14 @@
 		 	 	<div class="col-md-1">&nbsp;</div>
 			  </div>
 			  <div class="row background-white">&nbsp;</div>
+			  <div class="row background-white">
+			 	<div class="col-md-1">&nbsp;</div>
+			 	<div class="col-md-10">
+			 		<p>Interested in being a Mentor? Please contact Jenny Cui at <a href="mailto:jenny.cui@power-unit.org">jenny.cui@power-unit.org</a> for more information about this year's opportunities!</p>
+			 	</div>
+			 	<div class="col-md-1">&nbsp;</div>
+			 </div>
+			  <div class="row background-white">&nbsp;</div>
 			</div>
 		 </div>
 		</div>
@@ -453,68 +448,50 @@
 			 	</div>
 			 </div>
 			 <div class="row background-black">&nbsp;</div>
+			 <div id="links">
 			 <div class="row background-black">
-			 	<div class="col-md-4">
-					<div id="links">
-				 		<a href="img/gallery/gallery-1.jpg" title="" data-gallery>
-	        			<img src="img/gallery/gallery-1t.jpg" alt="e3-challenge-1"></a>
-        			</div>
-        		</div>
-			 	<div class="col-md-4">
-			 		<div id="links">
-				 		<a href="img/gallery/gallery-2.jpg" title="" data-gallery>
-	        			<img src="img/gallery/gallery-2t.jpg" alt="e3-challenge-2"></a>
-        			</div>
+			 	<div class="col-md-4 padding-none">
+			 		<a href="img/gallery/gallery-1.jpg" title="" data-gallery>
+	        		<img class="img-full" src="img/gallery/gallery-1t.jpg" alt="e3-challenge-1"></a>
 			 	</div>
-			 	<div class="col-md-4">
-			 		<div id="links">
-				 		<a href="img/gallery/gallery-3.jpg" title="" data-gallery>
-	        			<img src="img/gallery/gallery-3t.jpg" alt="e3-challenge-3"></a>
-        			</div>
+			 	<div class="col-md-4 padding-none">
+	        		<a href="img/gallery/gallery-2.jpg" title="" data-gallery>
+	        		<img class="img-full" src="img/gallery/gallery-2t.jpg" alt="e3-challenge-2"></a>
+        		</div>
+        		<div class="col-md-4 padding-none">
+			 		<a href="img/gallery/gallery-3.jpg" title="" data-gallery>
+	        		<img class="img-full" src="img/gallery/gallery-3t.jpg" alt="e3-challenge-3"></a>
 			 	</div>
 			 </div>
-			 <div class="row background-black">&nbsp;</div>
 			 <div class="row background-black">
-			 	<div class="col-md-4">
-			 		<div id="links">
-						<a href="img/gallery/gallery-4.jpg" title="" data-gallery>
-	        			<img src="img/gallery/gallery-4t.jpg" alt="e3-challenge-4"></a>
-        			</div>
+			 	<div class="col-md-4 padding-none">
+			 		<a href="img/gallery/gallery-4.jpg" title="" data-gallery>
+	        		<img class="img-full" src="img/gallery/gallery-4t.jpg" alt="e3-challenge-4"></a>
 			 	</div>
-			 	<div class="col-md-4">
-			 		<div id="links">
-				 		<a href="img/gallery/gallery-5.jpg" title="" data-gallery>
-	        			<img src="img/gallery/gallery-5t.jpg" alt="e3-challenge-5"></a>
-        			</div>
+			 	<div class="col-md-4 padding-none">
+	        		<a href="img/gallery/gallery-5.jpg" title="" data-gallery>
+	        		<img class="img-full" src="img/gallery/gallery-5t.jpg" alt="e3-challenge-5"></a>	
 			 	</div>
-			 	<div class="col-md-4">
-			 		<div id="links">
-						<a href="img/gallery/gallery-6.jpg" title="" data-gallery>
-	        			<img src="img/gallery/gallery-6t.jpg" alt="e3-challenge-6"></a>
-        			</div>
+			 	<div class="col-md-4 padding-none">
+			 		<a href="img/gallery/gallery-6.jpg" title="" data-gallery>
+	        		<img class="img-full" src="img/gallery/gallery-6t.jpg" alt="e3-challenge-6"></a>
 			 	</div>
 			 </div>			 		
-			 <div class="row background-black">&nbsp;</div>
 			 <div class="row background-black">
-			 	<div class="col-md-4">
-			 		<div id="links">
-				 		<a href="img/gallery/gallery-7.jpg" title="" data-gallery>
-	        			<img src="img/gallery/gallery-7t.jpg" alt="e3-challenge-7"></a>
-        			</div>
+			 	<div class="col-md-4 padding-none">
+			 		<a href="img/gallery/gallery-7.jpg" title="" data-gallery>
+	        		<img class="img-full" src="img/gallery/gallery-7t.jpg" alt="e3-challenge-7"></a>
 			 	</div>
-			 	<div class="col-md-4">
-			 		<div id="links">
-				 		<a href="img/gallery/gallery-8.jpg" title="" data-gallery>
-	        			<img src="img/gallery/gallery-8t.jpg" alt="e3-challenge-8"></a>
-        			</div>
+			 	<div class="col-md-4 padding-none">	
+	        		<a href="img/gallery/gallery-8.jpg" title="" data-gallery>
+	        		<img class="img-full" src="img/gallery/gallery-8t.jpg" alt="e3-challenge-8"></a>
 			 	</div>
-			 	<div class="col-md-4">
-			 		<div id="links">
-				 		<a href="img/gallery/gallery-9.jpg" title="" data-gallery>
-	        			<img src="img/gallery/gallery-9t.jpg" alt="e3-challenge-9"></a>
-        			</div>
+			 	<div class="col-md-4 padding-none">
+			 		<a href="img/gallery/gallery-9.jpg" title="" data-gallery>
+	        		<img class="img-full" src="img/gallery/gallery-9t.jpg" alt="e3-challenge-9"></a>
 			 	</div>
 			 </div>
+			 </div><!-- closes links -->
 			<div class="row background-black">&nbsp;</div>
 			</div><!-- closes big column -->
 		 </div><!-- close big row -->	   
@@ -546,32 +523,32 @@
 				 			<div class="col-md-6 text-center"><img src="img/logo/rbc_logo1.png" /></div>
 				 		</div>
 				 		<div class="row">&nbsp;</div>
-				 		
 				 	</div>
 				 	<div class="col-md-5">
 				 						<img src="img/logo/telus_logo1.png" />
 				 						<blockquote>
-				 						<p>“On behalf of the TELUS team, I had a great time working with the E3 organizing primes and student teams. We were very impressed by the detailed marketing strategies that the teams developed under tight timelines and the level of professionalism showcased during the challenge presentations. Not only did the students highlight new marketing insights that we will incorporate into future campaigns, but it was also very rewarding to see the students develop their marketing skills during the challenge. Congrats and a job well done to all the 2013 E3 teams!”
-											
+				 						<p>“On behalf of the TELUS team, I had a great time working with the E3 organizing primes and student teams. We were very impressed by the detailed marketing strategies that the teams developed under tight timelines and the level of professionalism showcased during the challenge presentations. Not only did the students highlight new marketing insights that we will incorporate into future campaigns, but it was also very rewarding to see the students develop their marketing skills during the challenge. Congrats and a job well done to all the 2013 E3 teams!”	
 										</p>
 										</blockquote>
 										<p>-          Ashley Cameron, Multicultural Marketing, TELUS</p>
 										
-			</div>
+					</div>
+					<div class="col-md-1">&nbsp;</div>
 				 </div>
- 		 	 	<div class="col-md-1">&nbsp;</div>
 				<div class="row">&nbsp;</div>
+				
 	 			<div class="row background-blue text-align-center">
 	 				<div class="col-md-12"><h1>INTERESTED IN BECOMING A PARTNER?</h1></div>
 	 			</div>
-	 			<div class="row">
+	 			<div class="row background-blue-text-black">
 	 				<div class="col-md-1">&nbsp;</div>
 	 				<div class="col-md-10">
 	 					<p><strong>Hands-On Projects - </strong>Assist E3 participants in obtaining practical experience through working with your company’s established product lines and services. Allow the youths to implement their ideas and observe the results of their efforts first hand.</p>
 						<p><strong>Professional Feedback - </strong>Take part in evaluating E3 participants’ performance. Provide professional feedback to E3 participants and help them further their development.</p>
 						<p><strong>Invest in Our Community’s Youths - </strong>Your participation in The E3 Challenge provides a valuable learning experience to many ambitious youths. Cookie-cutter type textbook education no longer suffices in equipping youths with the necessary tools to succeed. Help us make learning fun and project your company as the driving force behind youth-empowering initiatives.</p>
 						<p><strong>Reach Out to the Youth Market - </strong>Through the projects, allow the youths to familiarize with your products and services first hand. Get them involved, engaged, and leave a lasting impression!</p>
-	 				<div class="cold-md-1">&nbsp;</div>
+	 				</div>
+	 				<div class="col-md-1">&nbsp;</div>
 	 			</div>	
 	 			<div class="row background-blue text-align-center">
 	 				<div class="col-md-4">&nbsp;</div>
@@ -580,7 +557,6 @@
 	 			</div>
 	 			<div class="row background-blue">&nbsp;</div>
 	 	</div>		   
-		</div>
 		</div>
 	</div>
 	<div class="section s6">
@@ -592,9 +568,9 @@
 				 	<div class="col-md-12"><h1>INTERESTED IN BECOMING A PARTICIPANT?</h1></div>
 				</div>
 				<div class="row">&nbsp;</div>
-				 <div class="row">
-				<div class="col-md-1">&nbsp;</div>
-			  	<div class="col-md-10">
+				<div class="row">
+					<div class="col-md-1">&nbsp;</div>
+			  		<div class="col-md-10">
 			  		<!--<section class="block">
 				    <div id="Carousel" class="carousel slide">
 				        <div class="carousel-inner">
@@ -637,8 +613,8 @@
 								    		<li>There will be a $20 program fee for successful applicants.</li>
 								    	</ol>   
 										
-			  	</div>
-			  	<div class="col-md-1">&nbsp;</div>
+			  		</div>
+			  		<div class="col-md-1">&nbsp;</div>
 				</div>
 				<div class="row">&nbsp;</div>
 				<div class="row">
@@ -659,12 +635,21 @@
 		</div>
 	</div>	
 
-</div>
-		<script src="js/jquery.blueimp-gallery.min.js"></script>
-		<script src="js/bootstrap-image-gallery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+</div><!-- ends wrap -->
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/vendor/plugins.js"></script>
         <script src="js/vendor/main.js"></script>
+		<script src="js/blueimp-gallery.min.js"></script>
+		<script>
+			document.getElementById('links').onclick = function (event) {
+			    event = event || window.event;
+			    var target = event.target || event.srcElement,
+			        link = target.src ? target.parentNode : target,
+			        options = {index: link, event: event},
+			        links = this.getElementsByTagName('a');
+			    blueimp.Gallery(links, options);
+			};
+		</script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <!--
